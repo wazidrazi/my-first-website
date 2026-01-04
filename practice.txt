@@ -1,0 +1,99 @@
+console.log("Hello world");
+console.log("Hellow world");
+console.log("Hello world");
+condole.log("Hello world");
+
+this is used to print something on the screen in javascript.
+
+variable:
+
+let age = 25;
+let age = 25;
+let age = 25;
+let age = 25;
+    age = 22;
+    age = 21;
+
+value can be changed
+
+const name = "Razi";
+const name = "Razi";
+const name = "Razi";
+
+let city = "Dhaka";
+let city = "Dhaka";
+let city = "Dhaka";
+
+
+let isLoggedin = true;
+let isStudent = true;
+let isLivedinDhaka = false;
+
+
+let name = "Razi";
+let age = 22;
+let isStudent =true;
+
+console.log(name);
+console.log(age);
+console.log(isStudent);
+
+
+
+
+let name = "wazid";
+let age = 23;
+let isBekar = true;
+
+console.log(name);
+console.log(age);
+console.log(isBekar);
+
+
+
+
+
+let fullname ="Wazid Ahmed Razi";
+let age = 25;
+let isStudent = true;
+let city = "Dhaka";
+let hasLaptop = true;
+
+console.log("My full name is " + fullname + " My age is " + age + " and I live in " + city);
+console.log("Am I a student " + isStudent + " and Do i have a laptop " + hasLaptop);
+
+console.log(fullname);
+console.log(age);
+console.log(isStudent);
+console.log(city);
+console.log(hasLaptop);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
