@@ -416,3 +416,371 @@
 //     .filter(employee => employee.age >= 18)
 //     .map(employee => `${employee.name} is ${employee.age} years old - ${salaryLevel(employee.salary)}`)
 //     .forEach(result => console.log(result));
+
+/*
+
+Spread operator:
+
+*/
+
+
+// let numbers = [1, 2, 3, 4];
+// let copy = [...numbers];
+// copy.push(5);
+// console.log(numbers);
+// console.log(copy);
+
+// let users = ["rahim", "karim", "jodu", "kodu"];
+// let newUser = [...users, "modhu"];
+// console.log(users);
+// console.log(newUser);
+
+
+// let user = {name : 'wazid', age : 25};
+// let updateUser = {...user, age : 26};
+
+// console.log(updateUser);
+
+
+// let cart = [
+//     { name: "Laptop", price: 65000 },
+//     { name: "Mouse", price: 800 }
+// ];
+
+// let newCart = [...cart,{name : "keyboard", price : 1500}
+
+// ];
+// console.log(cart);
+// console.log(newCart);
+
+/*
+
+REST Parameter:
+
+*/
+
+// function add(...numbers){
+//     let total = 0;
+//     for(let num of numbers){
+//         total += num;
+//     }
+//     return total;
+// }
+
+// console.log(add(1, 2, 3, 4));
+// console.log(add(7, 8, 9));
+
+
+// function totalSalary(...salaries){
+//     let total = 0;
+//     for (let salary of salaries){
+//         total += salary
+//     }
+//     return total;
+// }
+// console.log(totalSalary(25000, 35000, 46000));
+
+
+// function totalSalary(...salaries){
+//     return salaries.reduce((sum, salary) => sum + salary,0 );
+// }
+// console.log(totalSalary(14000, 26000, 55500));
+
+
+// function calculateTotal(...prices){
+//     return prices.reduce((sum, price) => sum + price,0);
+// };
+// console.log((calculateTotal(130, 480, 910)));
+
+
+// function showEmployees(company, ...employees){
+//     console.log("Company:",company);
+//     employees.forEach(employee => console.log(employee));
+// }
+// showEmployees("TOTO", "Wazid", "Rahim", "Karim");
+
+
+// let numbers = [1, 2, 3];
+// let copy = [...numbers];
+// console.log(numbers);
+// console.log(copy);
+
+
+// let arr1 = [1, 2];
+// let arr2 = [3,4];
+// let merge = [...arr1,...arr2];
+// console.log(merge);
+
+
+// let user = {name : "Razi", age : 25};
+// let newUser = {...user,age : 26};
+// console.log(newUser);
+
+
+// let cart = [
+//     { name: "Laptop", price: 65000 },
+//     { name: "Mouse", price: 800 }
+// ];
+
+// let addCart = [...cart, {name : 'keyboard', price : 1500}];
+
+// console.log (addCart);
+
+
+// function add(...numbers){
+//     return numbers.reduce((sum,n) => sum + n,0);
+// }
+
+// console.log(add(3, 5, 7, 9));
+
+
+// function showEmployees(company,...employees){
+//     console.log(company);
+//     employees.forEach(employee => console.log(employee));
+// }
+
+// showEmployees("techMania" , "Wazid" , "Rahim", "Karim");
+
+
+// console.log("Start");
+
+// setTimeout(() => {
+//     console.log("This runs after 2 seconds");
+// }, 2000);
+
+// console.log("End");
+
+
+
+// console.log("kire");
+// setInterval(() => {
+//     console.log ("Valo asos?");
+// }, 6000);
+
+
+// console.log("Loading...");
+// setTimeout(() => {
+//     console.log("Done!");
+// }, 3000);
+
+
+
+// function getData(callback) {
+//     setTimeout(() => {
+//         callback("Data received");
+//     }, 2000);
+// }
+
+// getData(result => {
+//     console.log(result);
+// });
+
+
+
+// let promise = new Promise((resolve, reject) => {
+//     let success = true;
+
+//     if (success) {
+//         resolve("Success!");
+//     } else {
+//         reject("Failed!");
+//     }
+// });
+// promise
+//     .then(result => console.log(result))
+//     .catch(error => console.log(error));
+
+
+// let promise = new Promise((resolve,reject) =>{
+//     let isLoggedIn = true;
+//     if(isLoggedIn){
+//         resolve("Login Successful");
+//     }else{
+//         reject("Login failed");
+//     }
+
+// });
+
+// async function loginStatus(){
+//   try{
+//     let data = await promise;
+//     console.log(data);
+// } catch(error) {
+//     console.log(error);
+//   }
+// }
+
+// loginStatus();
+
+// function fetchData(){
+//     return new Promise(resolve => {
+//         setTimeout(() =>{
+//             resolve([
+//                 {name : "Wazid", age : 25, salary : 45000},
+//                 {name : "Karim", age : 23, salary : 23000},
+//                 {name : "Rahim", age : 26, salary : 55000},
+//             ]);
+//         },3000);
+//     });
+// }
+
+// async function userStatus(){
+//     let users = await fetchData();
+//     console.log(users);
+// }
+// userStatus();
+
+
+
+// function fetchUsers() {
+//     return new Promise(resolve => {
+//         setTimeout(() => {
+//             resolve([
+//                 { name: "Rafi", age: 17, salary: 20000 },
+//                 { name: "Tariq", age: 25, salary: 30000 },
+//                 { name: "Nabil", age: 30, salary: 50000 }
+//             ]);
+//         }, 2000);
+//     });
+// }
+
+// let salaryLevel = salary =>
+//     salary >= 40000 ?  "Excellent" : salary >= 25000? "Good" : "Low";
+
+// async function showUserSummary(){
+//     let users = await fetchUsers();
+
+//     users
+//         .filter(user => user.age > 18)
+//         .map(user =>`${user.name} - ${salaryLevel(user.salary)}`)
+//         .forEach(text => console.log(text));
+// }
+
+// showUserSummary();
+
+
+
+
+// function fetchUsers() {
+//     return new Promise(resolve => {
+//         setTimeout(() => {
+//             resolve([
+//                 { name: "Rafi", age: 17, salary: 20000 },
+//                 { name: "Tariq", age: 25, salary: 30000 },
+//                 { name: "Nabil", age: 30, salary: 50000 }
+//             ]);
+//         }, 2000);
+//     });
+// }
+
+
+
+// async function userStatus(){
+//     let users = await fetchUsers();
+
+//     users
+//         .filter(user => user.salary >= 30000)
+//         .map(user => `${user.name} - ${user.salary}`)
+//         .forEach(text => console.log(text));
+// }
+// userStatus();
+
+
+
+// function fetchUsers() {
+//     return new Promise(resolve => {
+//         setTimeout(() => {
+//             resolve([
+//                 { name: "Rafi", age: 17, salary: 20000 },
+//                 { name: "Tariq", age: 25, salary: 30000 },
+//                 { name: "Nabil", age: 30, salary: 50000 }
+//             ]);
+//         }, 2000);
+//     });
+// }
+
+// async function totalSalaryWithChain() {
+//     let totalSalary = (await fetchUsers())
+//         .filter(user => user.age >= 18 && user.salary >= 25000)
+//         .reduce((sum, user) => sum + user.salary, 0);
+
+//     console.log("Total Salary:", totalSalary);
+// }
+
+// totalSalaryWithChain();
+
+
+// function fetchEmployee(){
+//     return new Promise(resolve => {
+//         setTimeout(() => {
+//         resolve([
+//             {name : "Wazid", age : 17, salary : 20000},
+//             {name : "Tariq", age : 25, salary : 30000},
+//             {name : "Wazid", age : 30, salary : 50000}
+//         ]);
+//        }, 3000); 
+//     });
+// }
+
+// async function calclulateTotalSalary(){
+//     let total = (await fetchEmployee())
+//         .filter(emp => emp.age >= 18)
+//         .reduce((sum,emp) => sum + emp.salary,0)
+
+//     console.log("Total Salary :", total);
+// }
+
+// calclulateTotalSalary();
+
+
+
+
+// function fetchEmployee(){
+//     return new Promise(resolve => {
+//         setTimeout(() => {
+//         resolve([
+//             {name : "Wazid", age : 17, salary : 20000},
+//             {name : "Tariq", age : 25, salary : 30000},
+//             {name : "Wazid", age : 30, salary : 50000}
+//         ]);
+//        }, 3000); 
+//     });
+// }
+
+// async function employeeStatus(){
+//     let users = await fetchEmployee()
+//     users
+//         .filter(emp => emp.salary >= 30000)
+//         .map(emp => `${emp.name} (${emp.age}) - ${emp.salary}`)
+//         .forEach(text => console.log(text));
+// }
+
+// employeeStatus();
+
+
+
+function fetchEmployees() {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve([
+                { name: "Rafi", age: 19, salary: 22000 },
+                { name: "Tariq", age: 26, salary: 42000 },
+                { name: "Nabil", age: 31, salary: 55000 },
+                { name: "Sami", age: 20, salary: 18000 }
+            ]);
+        }, 2000);
+    });
+}
+
+let salaryLevel =
+    salary => salary >= 40000? "Bonus Eligible" : "No Bonus";
+
+async function employeeStatus() {
+    (await fetchEmployees())
+        .filter(emp => emp.age >= 21)
+        .map(emp => `${emp.name} (${emp.age}) - ${emp.salary} - ${salaryLevel(emp.salary)}`)
+        .forEach(text => console.log(text));
+}
+
+employeeStatus();
+
