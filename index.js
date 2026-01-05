@@ -759,28 +759,28 @@ REST Parameter:
 
 
 
-function fetchEmployees() {
-    return new Promise(resolve => {
-        setTimeout(() => {
-            resolve([
-                { name: "Rafi", age: 19, salary: 22000 },
-                { name: "Tariq", age: 26, salary: 42000 },
-                { name: "Nabil", age: 31, salary: 55000 },
-                { name: "Sami", age: 20, salary: 18000 }
-            ]);
-        }, 2000);
-    });
-}
+// function fetchEmployees() {
+//     return new Promise(resolve => {
+//         setTimeout(() => {
+//             resolve([
+//                 { name: "Rafi", age: 19, salary: 22000 },
+//                 { name: "Tariq", age: 26, salary: 42000 },
+//                 { name: "Nabil", age: 31, salary: 55000 },
+//                 { name: "Sami", age: 20, salary: 18000 }
+//             ]);
+//         }, 2000);
+//     });
+// }
 
-let salaryLevel =
-    salary => salary >= 40000? "Bonus Eligible" : "No Bonus";
+// let salaryLevel =
+//     salary => salary >= 40000? "Bonus Eligible" : "No Bonus";
 
-async function employeeStatus() {
-    (await fetchEmployees())
-        .filter(emp => emp.age >= 21)
-        .map(emp => `${emp.name} (${emp.age}) - ${emp.salary} - ${salaryLevel(emp.salary)}`)
-        .forEach(text => console.log(text));
-}
+// async function employeeStatus() {
+//     (await fetchEmployees())
+//         .filter(emp => emp.age >= 21)
+//         .map(emp => `${emp.name} (${emp.age}) - ${emp.salary} - ${salaryLevel(emp.salary)}`)
+//         .forEach(text => console.log(text));
+// }
 
-employeeStatus();
+// employeeStatus();
 
