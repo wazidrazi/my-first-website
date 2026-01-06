@@ -784,3 +784,45 @@ REST Parameter:
 
 // employeeStatus();
 
+
+
+// function getMessage(){
+//     return new Promise((resolve, reject) => {
+//         reject("Something went wrong");
+//     });
+// }
+
+// async function showMessage(){
+//     try {
+//         let result = await getMessage();
+//         console.log(result);
+//     } catch (error) {
+//         console.log("Handled:", error);
+//     }
+// }
+
+// showMessage();
+
+
+
+function fetchData(){
+    return new Promise((resolve,reject)=> {
+       let isSuccess = false;
+        if (isSuccess){
+            resolve("Data Loaded");
+        }else{
+            reject("Failed to load data");
+        }
+    });
+}
+
+async function loadData(){
+    try{
+        let result = await fetchData();
+        console.log(result);
+    } catch(error){
+        console.log("Handled:",error);
+    }
+}
+
+loadData();
