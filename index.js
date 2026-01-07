@@ -805,24 +805,46 @@ REST Parameter:
 
 
 
-function fetchData(){
-    return new Promise((resolve,reject)=> {
-       let isSuccess = false;
-        if (isSuccess){
-            resolve("Data Loaded");
-        }else{
-            reject("Failed to load data");
-        }
+// function fetchData(){
+//     return new Promise((resolve,reject)=> {
+//        let isSuccess = false;
+//         if (isSuccess){
+//             resolve("Data Loaded");
+//         }else{
+//             reject("Failed to load data");
+//         }
+//     });
+// }
+
+// async function loadData(){
+//     try{
+//         let result = await fetchData();
+//         console.log(result);
+//     } catch(error){
+//         console.log("Handled:",error);
+//     }
+// }
+
+// loadData();
+
+
+
+function fetchNumbers(){
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve([10,20,30,40]);
+        }, 2000);
     });
 }
 
-async function loadData(){
+async function showNumbers(){
     try{
-        let result = await fetchData();
-        console.log(result);
-    } catch(error){
-        console.log("Handled:",error);
+        let numbers = await fetchNumbers();
+            numbers
+                .filter(num => num >= 20)
+                .forEach(num => console.log(num));
+    }catch(error) {
+        console.log("Error Handled", error);
     }
 }
-
-loadData();
+showNumbers();
