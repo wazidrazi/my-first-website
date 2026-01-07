@@ -850,19 +850,42 @@ REST Parameter:
 // showNumbers();
 
 
-function orderFood() {
-    return new Promise(resolve => {
-        setTimeout(() => {
-            resolve("Food delivered 🍔");
-        }, 2000);
+// function orderFood() {
+//     return new Promise(resolve => {
+//         setTimeout(() => {
+//             resolve("Food delivered 🍔");
+//         }, 2000);
+//     });
+// }
+
+// async function eatFood() {
+//     console.log("Ordering food...");
+//     let food = await orderFood();
+//     console.log(food);
+//     console.log("Eating food 😋");
+// }
+
+// eatFood();
+
+
+function loginUser(){
+    return new Promise((resolve,reject) =>{
+        let hasInternet = false;
+        if(hasInternet){
+            resolve("Login Successfully");
+        }else{
+            reject("No Internet Connection");
+        }
     });
 }
 
-async function eatFood() {
-    console.log("Ordering food...");
-    let food = await orderFood();
-    console.log(food);
-    console.log("Eating food 😋");
+async function login(){
+    try{
+        let result = await loginUser();
+        console.log(result);
+    }catch(error){
+        console.log("Error:",error);
+    }
 }
 
-eatFood();
+login();
