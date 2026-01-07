@@ -868,24 +868,42 @@ REST Parameter:
 // eatFood();
 
 
-function loginUser(){
-    return new Promise((resolve,reject) =>{
-        let hasInternet = false;
-        if(hasInternet){
-            resolve("Login Successfully");
-        }else{
-            reject("No Internet Connection");
-        }
+// function loginUser(){
+//     return new Promise((resolve,reject) =>{
+//         let hasInternet = false;
+//         if(hasInternet){
+//             resolve("Login Successfully");
+//         }else{
+//             reject("No Internet Connection");
+//         }
+//     });
+// }
+
+// async function login(){
+//     try{
+//         let result = await loginUser();
+//         console.log(result);
+//     }catch(error){
+//         console.log("Error:",error);
+//     }
+// }
+
+// login();
+
+
+
+function fetchMarks(){
+    return new Promise(resolve =>{
+        setTimeout(()=>{
+            resolve([35,60,80,45]);
+        },2000);
     });
 }
 
-async function login(){
-    try{
-        let result = await loginUser();
-        console.log(result);
-    }catch(error){
-        console.log("Error:",error);
-    }
+async function showResult(){
+    let results = await fetchMarks();
+        results
+            .filter(num => num >= 40)
+            .forEach(num => console.log("Passed:",num));
 }
-
-login();
+showResult();
