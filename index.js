@@ -829,22 +829,40 @@ REST Parameter:
 
 
 
-function fetchNumbers(){
+// function fetchNumbers(){
+//     return new Promise(resolve => {
+//         setTimeout(() => {
+//             resolve([10,20,30,40]);
+//         }, 2000);
+//     });
+// }
+
+// async function showNumbers(){
+//     try{
+//         let numbers = await fetchNumbers();
+//             numbers
+//                 .filter(num => num >= 20)
+//                 .forEach(num => console.log(num));
+//     }catch(error) {
+//         console.log("Error Handled", error);
+//     }
+// }
+// showNumbers();
+
+
+function orderFood() {
     return new Promise(resolve => {
         setTimeout(() => {
-            resolve([10,20,30,40]);
+            resolve("Food delivered 🍔");
         }, 2000);
     });
 }
 
-async function showNumbers(){
-    try{
-        let numbers = await fetchNumbers();
-            numbers
-                .filter(num => num >= 20)
-                .forEach(num => console.log(num));
-    }catch(error) {
-        console.log("Error Handled", error);
-    }
+async function eatFood() {
+    console.log("Ordering food...");
+    let food = await orderFood();
+    console.log(food);
+    console.log("Eating food 😋");
 }
-showNumbers();
+
+eatFood();
