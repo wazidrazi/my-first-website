@@ -921,16 +921,16 @@ REST Parameter:
 //     .forEach(text => console.log(text));
 
 
-let users = [
-  { name: "Rafi", age: 17, salary: 20000 },
-  { name: "Tariq", age: 25, salary: 30000 },
-  { name: "Nabil", age: 30, salary: 50000 },
-  { name: "Sami", age: 22, salary: 18000 }
-];
+// let users = [
+//   { name: "Rafi", age: 17, salary: 20000 },
+//   { name: "Tariq", age: 25, salary: 30000 },
+//   { name: "Nabil", age: 30, salary: 50000 },
+//   { name: "Sami", age: 22, salary: 18000 }
+// ];
 
-let salaries = salary => salary >= 40000 ? "Excellent" : salary >= 25000 ? "Good" : "Low";
+// let salaries = salary => salary >= 40000 ? "Excellent" : salary >= 25000 ? "Good" : "Low";
 
-users
-    .filter(user => user.age >= 18 && user.salary >= 25000)
-    .map(user => `${user.name} - ${user.age} - ${salaries(user.salary)}`)
-    .forEach(text => console.log(text));
+// users
+//     .filter(user => user.age >= 18 && user.salary >= 25000)
+//     .map(user => `${user.name} - ${user.age} - ${salaries(user.salary)}`)
+//     .forEach(text => console.log(text));
