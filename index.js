@@ -909,15 +909,28 @@ REST Parameter:
 // showResult();
 
 
-let products = [
-  { name: "Laptop", price: 65000, inStock: true },
-  { name: "Mouse", price: 800, inStock: false },
-  { name: "Keyboard", price: 1500, inStock: true }
+// let products = [
+//   { name: "Laptop", price: 65000, inStock: true },
+//   { name: "Mouse", price: 800, inStock: false },
+//   { name: "Keyboard", price: 1500, inStock: true }
+// ];
+
+// products
+//     .filter(product =>  product.inStock && product.price >= 1000)
+//     .map(product => `${product.name} - ${product.price}`)
+//     .forEach(text => console.log(text));
+
+
+let users = [
+  { name: "Rafi", age: 17, salary: 20000 },
+  { name: "Tariq", age: 25, salary: 30000 },
+  { name: "Nabil", age: 30, salary: 50000 },
+  { name: "Sami", age: 22, salary: 18000 }
 ];
 
-products
-    .filter(product =>  product.inStock && product.price >= 1000)
-    .map(product => `${product.name} - ${product.price}`)
-    .forEach(text => console.log(text));
+let salaries = salary => salary >= 40000 ? "Excellent" : salary >= 25000 ? "Good" : "Low";
 
-    
+users
+    .filter(user => user.age >= 18 && user.salary >= 25000)
+    .map(user => `${user.name} - ${user.age} - ${salaries(user.salary)}`)
+    .forEach(text => console.log(text));
