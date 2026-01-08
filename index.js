@@ -892,18 +892,32 @@ REST Parameter:
 
 
 
-function fetchMarks(){
-    return new Promise(resolve =>{
-        setTimeout(()=>{
-            resolve([35,60,80,45]);
-        },2000);
-    });
-}
+// function fetchMarks(){
+//     return new Promise(resolve =>{
+//         setTimeout(()=>{
+//             resolve([35,60,80,45]);
+//         },2000);
+//     });
+// }
 
-async function showResult(){
-    let results = await fetchMarks();
-        results
-            .filter(num => num >= 40)
-            .forEach(num => console.log("Passed:",num));
-}
-showResult();
+// async function showResult(){
+//     let results = await fetchMarks();
+//         results
+//             .filter(num => num >= 40)
+//             .forEach(num => console.log("Passed:",num));
+// }
+// showResult();
+
+
+let products = [
+  { name: "Laptop", price: 65000, inStock: true },
+  { name: "Mouse", price: 800, inStock: false },
+  { name: "Keyboard", price: 1500, inStock: true }
+];
+
+products
+    .filter(product =>  product.inStock && product.price >= 1000)
+    .map(product => `${product.name} - ${product.price}`)
+    .forEach(text => console.log(text));
+
+    
