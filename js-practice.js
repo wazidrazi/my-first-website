@@ -934,3 +934,11 @@ REST Parameter:
 //     .filter(user => user.age >= 18 && user.salary >= 25000)
 //     .map(user => `${user.name} - ${user.age} - ${salaries(user.salary)}`)
 //     .forEach(text => console.log(text));
+
+
+
+
+
+
+
+/* End of JS Practice */
