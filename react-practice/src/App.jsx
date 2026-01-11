@@ -121,25 +121,52 @@
 
 
 
+// function App(){
+//   return(
+//     <PlayerCard name="Wazid" score={82} />
+//   );
+// }
+
+// function PlayerCard({name, score}){
+//   return(
+//     <div>
+//       <p>
+//         {name} <Performance score={score} />
+//       </p>
+//     </div>
+//   );
+// }
+
+// function Performance({score}){
+//   return(
+//    <p> {score >= 50 ? "Qualified" : "Not Qualified"} </p>
+//   );
+// }
+
+// export default App;
+
+
+
 function App(){
   return(
-    <PlayerCard name="Wazid" score={82} />
+    <ExamCard name="Wazid" marks={72} />
   );
 }
 
-function PlayerCard({name, score}){
+function ExamCard({name, marks}){
   return(
     <div>
-      <p>
-        {name} <Performance score={score} />
-      </p>
+      <p>Name: {name} </p> <br />
+      <p>Marks: {marks} </p>
+
+      <Grade marks={marks} />
     </div>
   );
 }
 
-function Performance({score}){
+function Grade({marks}){
   return(
-   <p> {score >= 50 ? "Qualified" : "Not Qualified"} </p>
+    <p> {marks >= 80 ? "Excellent" : marks >= 40 ? "Pass" : "Fail"} </p>
   );
 }
 
