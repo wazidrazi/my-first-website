@@ -147,27 +147,44 @@
 
 
 
-function App(){
-  return(
-    <ExamCard name="Wazid" marks={72} />
-  );
-}
+// function App(){
+//   return(
+//     <ExamCard name="Wazid" marks={72} />
+//   );
+// }
 
-function ExamCard({name, marks}){
-  return(
+// function ExamCard({name, marks}){
+//   return(
+//     <div>
+//       <p>Name: {name} </p> <br />
+//       <p>Marks: {marks} </p>
+
+//       <Grade marks={marks} />
+//     </div>
+//   );
+// }
+
+// function Grade({marks}){
+//   return(
+//     <p> {marks >= 80 ? "Excellent" : marks >= 40 ? "Pass" : "Fail"} </p>
+//   );
+// }
+
+// export default App;
+
+
+import React, { useState } from "react";
+
+function Counter() {
+  const [count, setCount] = useState(0); // initial value 0
+
+  return (
     <div>
-      <p>Name: {name} </p> <br />
-      <p>Marks: {marks} </p>
-
-      <Grade marks={marks} />
+      <h1>Count: {count}</h1>
+      <button onClick={() => setCount(count + 1)}>Increase</button>
+      <button onClick={() => setCount(count - 1)}>Decrease</button>
     </div>
   );
 }
 
-function Grade({marks}){
-  return(
-    <p> {marks >= 80 ? "Excellent" : marks >= 40 ? "Pass" : "Fail"} </p>
-  );
-}
-
-export default App;
+export default Counter;
